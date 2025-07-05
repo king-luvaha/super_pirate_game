@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# VS Code settings (if using VS Code)
+.vscode/
+
+# PyInstaller build folders
+build/
+dist/
+*.spec
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python egg info
+*.egg-info/
+
+# IDEs
+.idea/
+*.iml
+
+# Test, coverage, and profiling
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+.cache
+.pytest_cache/
+
+
