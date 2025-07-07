@@ -33,6 +33,9 @@ class Game:
             'boat': import_folder('.', 'assets', 'graphics', 'objects', 'boat'),
             'spike': import_image('.', 'assets', 'graphics', 'enemies', 'spike_ball', 'Spiked Ball'),
             'spike_chain': import_image('.', 'assets', 'graphics', 'enemies', 'spike_ball', 'spiked_chain'),
+            'tooth': import_folder('.', 'assets', 'graphics', 'enemies', 'tooth', 'run'),
+            'shell': import_sub_folders('.', 'assets', 'graphics', 'enemies', 'shell'),
+            'pearl': import_image('.', 'assets', 'graphics', 'enemies', 'bullets', 'pearld'),
         }
 
     def run(self):
