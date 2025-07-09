@@ -163,8 +163,11 @@ class Node(pygame.sprite.Sprite):
         self.grid_pos = (int(pos[0] / TILE_SIZE), int(pos[1] / TILE_SIZE))
 
     def can_move(self, direction):
-        if direction in list(self.paths.keys()) and int(self.paths[direction][0][0]) <= self.data.unlocked_level:
-            return True
+        if direction not in self.paths:
+            return False
+        path_id = int(self.paths[direction][0])
+        return path_id <= self.data.unlocked_level
+
 
 class Icon(pygame.sprite.Sprite):
     def __init__(self, pos, groups, frames):
