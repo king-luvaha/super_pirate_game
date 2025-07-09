@@ -149,6 +149,7 @@ class Overworld:
         nodes = pygame.sprite.spritecollide(self.icon, self.node_sprites, False)
         if nodes:
             self.current_node = nodes[0]
+        else: self.current_node = None
 
     def run(self, dt):
         self.input()
