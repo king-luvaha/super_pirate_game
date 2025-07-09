@@ -15,10 +15,11 @@ class Data:
     @coins.setter
     def coins(self, value):
         self._coins = value
-        if self.coins >= 100:
-            self.coins -= 100
+        while self._coins >= 100:
+            self._coins -= 100
             self.health += 1
-        self.ui.show_coins(self.coins)
+        self.ui.show_coins(self._coins)
+
 
     @property
     def health(self):
@@ -26,5 +27,5 @@ class Data:
     
     @health.setter
     def health(self, value):
-        self._health = value
+        self._health = max(0, value)
         self.ui.create_hearts(value)
