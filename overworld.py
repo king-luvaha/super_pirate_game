@@ -1,7 +1,7 @@
 from settings import *
 from sprites import Sprite, AnimatedSprite, Node, Icon, PathSprite
 from groups import WorldSprites
-from random import randint
+from random import uniform
 
 class Overworld:
     def __init__(self, tmx_map, data, overworld_frames, switch_stage):
@@ -34,7 +34,7 @@ class Overworld:
         # Objects
         for obj in tmx_map.get_layer_by_name('Objects'):
             if obj.name == 'palm':
-                AnimatedSprite((obj.x, obj.y), overworld_frames['palms'], self.all_sprites, Z_LAYERS['main'], randint(4, 6))
+                AnimatedSprite((obj.x, obj.y), overworld_frames['palms'], self.all_sprites, Z_LAYERS['main'], uniform(3, 7))
             else:
                 z = Z_LAYERS[f'{'bg details' if obj.name == 'grass' else 'bg tiles'}']
                 Sprite((obj.x, obj.y), obj.image, self.all_sprites, z)
